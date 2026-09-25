@@ -17,11 +17,14 @@ starts at the top of the page and makes you walk to wherever you were looking.
 This userscript closes that gap: hint the paragraph you are reading, and your
 caret is there.
 
-The idea is not new:
+The interaction is not new — it comes straight from vim-like browsers:
 
-* **VimFx** implements exactly this in its caret mode — "Every element with
-  non-empty `TextNodes` as direct children get a hint, and activating a hint
-  places the caret at the beginning of that element" (as noted in
+* **Tridactyl** (Firefox) does this in its caret mode, which is what this script
+  set out to reproduce in qutebrowser: pick the text block you want to start
+  from, and the caret is placed there,
+* **VimFx** (Firefox, now unmaintained) implements the same idea — "Every element
+  with non-empty `TextNodes` as direct children get a hint, and activating a
+  hint places the caret at the beginning of that element" (as noted in
   [qutebrowser#1453](https://github.com/qutebrowser/qutebrowser/issues/1453)),
 * [qutebrowser#1453](https://github.com/qutebrowser/qutebrowser/issues/1453)
   ("Make caret mode more efficient by adding easymotion mode", open since 2016)

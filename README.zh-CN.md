@@ -13,11 +13,13 @@ userscript，无需修改 qutebrowser 本体。Tridactyl 式的手感：先指�
 用鼠标选文字是一次上下文切换；而单独用 caret mode 时，光标总是从网页顶部开始，
 你得一步步走到刚才读的位置。这个脚本补上这一段：对你正在读的段落打 hint，光标就在那里。
 
-这个想法并不新：
+这个交互并不新 —— 它直接来自 vim 系浏览器：
 
-* **VimFx** 的 caret mode 早就这么做了 ——「每个直接子节点含非空 `TextNodes` 的元素都有一个
-  hint，激活 hint 就把光标放到该元素开头」（见
-  [qutebrowser#1453](https://github.com/qutebrowser/qutebrowser/issues/1453) 中的记录），
+* **Tridactyl**（Firefox）的 caret mode 就是这么做的，本脚本要做的正是把它搬到
+  qutebrowser 上：指到你想开始的那段文字，光标就落在那里，
+* **VimFx**（Firefox，已停止维护）实现的是同一个想法 ——「每个直接子节点含非空
+  `TextNodes` 的元素都有一个 hint，激活 hint 就把光标放到该元素开头」
+  （见 [qutebrowser#1453](https://github.com/qutebrowser/qutebrowser/issues/1453) 中的记录），
 * [qutebrowser#1453](https://github.com/qutebrowser/qutebrowser/issues/1453)
   (「Make caret mode more efficient by adding easymotion mode」，2016 年开至今仍 open)
   要的就是这种无鼠标的光标导航，
